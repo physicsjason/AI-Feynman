@@ -33,13 +33,13 @@ def dimensionalAnalysis(pathdir, filename, eq_symbols):
 
     units = {}
     for i in range(len(file["Variable"])):
-        val = [file["m"][i],file["s"][i],file["kg"][i],file["T"][i],file["V"][i],file["cd"][i]]
+        val = [file["m"][i],file["s"][i],file["kg"][i],file["T"][i],file["V"][i]]
         val = np.array(val)
         units[file["Variable"][i]] = val
 
     dependent_var = eq_symbols[-1]
 
-    file_sym = open(filename + "_dim_red_variables.txt" ,"w")
+    file_sym = open(pathdir + filename + "_dim_red_variables.txt" ,"w")
     file_sym.write(filename)
     file_sym.write(", ")
 

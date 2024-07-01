@@ -93,7 +93,8 @@ def run_AI_all(pathdir,filename,BF_try_time=60,BF_ops_file_type="14ops", polyfit
     if symmetry_plus_result[0]==-1:
         idx_min = -1
     else:
-        idx_min = np.argmin(np.array([symmetry_plus_result[0], symmetry_minus_result[0], symmetry_multiply_result[0], symmetry_divide_result[0], separability_plus_result[0], separability_multiply_result[0]]))
+        temp = [symmetry_plus_result[0], symmetry_minus_result[0], symmetry_multiply_result[0], symmetry_divide_result[0], separability_plus_result[0], separability_multiply_result[0]]
+        idx_min = np.argmin(np.array([x.cpu() for x in temp]))
 
     print("")
     # Check if compositionality is better than the best so far
@@ -251,7 +252,7 @@ def run_aifeynman(pathdir,filename,BF_try_time,BF_ops_file_type, polyfit_deg=4, 
     try:
         if vars_name!=[]:
             dimensionalAnalysis(pathdir,filename,vars_name)
-            DR_file = filename + "_dim_red_variables.txt"
+            DR_file = pathdir + filename + "_dim_red_variables.txt"
             filename = filename + "_dim_red"
         else:
             DR_file = ""

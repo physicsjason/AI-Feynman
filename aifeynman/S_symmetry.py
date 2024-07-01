@@ -46,8 +46,8 @@ def check_translational_symmetry_minus(pathdir, filename):
         pathdir_weights = "results/NN_trained_models/models/"
 
         # load the data
-        n_variables = np.loadtxt(pathdir+"/%s" %filename, dtype='str').shape[1]-1
-        variables = np.loadtxt(pathdir+"/%s" %filename, usecols=(0,))
+        n_variables = np.loadtxt(pathdir+filename, dtype='str').shape[1]-1
+        variables = np.loadtxt(pathdir+filename, usecols=(0,))
 
         if n_variables==1:
             print(filename, "just one variable for ADD \n")
@@ -55,11 +55,11 @@ def check_translational_symmetry_minus(pathdir, filename):
             return (-1,-1,-1)
         else:
             for j in range(1,n_variables):
-                v = np.loadtxt(pathdir+"/%s" %filename, usecols=(j,))
+                v = np.loadtxt(pathdir+filename, usecols=(j,))
                 variables = np.column_stack((variables,v))
         
 
-        f_dependent = np.loadtxt(pathdir+"/%s" %filename, usecols=(n_variables,))
+        f_dependent = np.loadtxt(pathdir+filename, usecols=(n_variables,))
         f_dependent = np.reshape(f_dependent,(len(f_dependent),1))
 
         factors = torch.from_numpy(variables) 
@@ -122,14 +122,14 @@ def do_translational_symmetry_minus(pathdir, filename, i,j):
         pathdir_weights = "results/NN_trained_models/models/"
 
         # load the data
-        n_variables = np.loadtxt(pathdir+"/%s" %filename, dtype='str').shape[1]-1
-        variables = np.loadtxt(pathdir+"/%s" %filename, usecols=(0,))
+        n_variables = np.loadtxt(pathdir+filename, dtype='str').shape[1]-1
+        variables = np.loadtxt(pathdir+filename, usecols=(0,))
 
         for k in range(1,n_variables):
-            v = np.loadtxt(pathdir+"/%s" %filename, usecols=(k,))
+            v = np.loadtxt(pathdir+filename, usecols=(k,))
             variables = np.column_stack((variables,v))
         
-        f_dependent = np.loadtxt(pathdir+"/%s" %filename, usecols=(n_variables,))
+        f_dependent = np.loadtxt(pathdir+filename, usecols=(n_variables,))
         f_dependent = np.reshape(f_dependent,(len(f_dependent),1))
 
         factors = torch.from_numpy(variables) 
@@ -183,8 +183,8 @@ def check_translational_symmetry_divide(pathdir, filename):
         pathdir_weights = "results/NN_trained_models/models/"
 
         # load the data
-        n_variables = np.loadtxt(pathdir+"/%s" %filename, dtype='str').shape[1]-1
-        variables = np.loadtxt(pathdir+"/%s" %filename, usecols=(0,))
+        n_variables = np.loadtxt(pathdir+filename, dtype='str').shape[1]-1
+        variables = np.loadtxt(pathdir+filename, usecols=(0,))
 
         if n_variables==1:
             print(filename, "just one variable for ADD \n")
@@ -192,11 +192,11 @@ def check_translational_symmetry_divide(pathdir, filename):
             return (-1,-1,-1)
         else:
             for j in range(1,n_variables):
-                v = np.loadtxt(pathdir+"/%s" %filename, usecols=(j,))
+                v = np.loadtxt(pathdir+filename, usecols=(j,))
                 variables = np.column_stack((variables,v))
         
 
-        f_dependent = np.loadtxt(pathdir+"/%s" %filename, usecols=(n_variables,))
+        f_dependent = np.loadtxt(pathdir+filename, usecols=(n_variables,))
         f_dependent = np.reshape(f_dependent,(len(f_dependent),1))
 
         factors = torch.from_numpy(variables) 
@@ -260,14 +260,14 @@ def do_translational_symmetry_divide(pathdir, filename, i,j):
         pathdir_weights = "results/NN_trained_models/models/"
 
         # load the data
-        n_variables = np.loadtxt(pathdir+"/%s" %filename, dtype='str').shape[1]-1
-        variables = np.loadtxt(pathdir+"/%s" %filename, usecols=(0,))
+        n_variables = np.loadtxt(pathdir+filename, dtype='str').shape[1]-1
+        variables = np.loadtxt(pathdir+filename, usecols=(0,))
 
         for k in range(1,n_variables):
-            v = np.loadtxt(pathdir+"/%s" %filename, usecols=(k,))
+            v = np.loadtxt(pathdir+filename, usecols=(k,))
             variables = np.column_stack((variables,v))
         
-        f_dependent = np.loadtxt(pathdir+"/%s" %filename, usecols=(n_variables,))
+        f_dependent = np.loadtxt(pathdir+filename, usecols=(n_variables,))
         f_dependent = np.reshape(f_dependent,(len(f_dependent),1))
 
         factors = torch.from_numpy(variables) 
@@ -320,8 +320,8 @@ def check_translational_symmetry_multiply(pathdir, filename):
         pathdir_weights = "results/NN_trained_models/models/"
 
         # load the data
-        n_variables = np.loadtxt(pathdir+"/%s" %filename, dtype='str').shape[1]-1
-        variables = np.loadtxt(pathdir+"/%s" %filename, usecols=(0,))
+        n_variables = np.loadtxt(pathdir+filename, dtype='str').shape[1]-1
+        variables = np.loadtxt(pathdir+filename, usecols=(0,))
 
         if n_variables==1:
             print(filename, "just one variable for ADD \n")
@@ -329,11 +329,11 @@ def check_translational_symmetry_multiply(pathdir, filename):
             return (-1,-1,-1)
         else:
             for j in range(1,n_variables):
-                v = np.loadtxt(pathdir+"/%s" %filename, usecols=(j,))
+                v = np.loadtxt(pathdir+filename, usecols=(j,))
                 variables = np.column_stack((variables,v))
         
 
-        f_dependent = np.loadtxt(pathdir+"/%s" %filename, usecols=(n_variables,))
+        f_dependent = np.loadtxt(pathdir+filename, usecols=(n_variables,))
         f_dependent = np.reshape(f_dependent,(len(f_dependent),1))
 
         factors = torch.from_numpy(variables) 
@@ -396,14 +396,14 @@ def do_translational_symmetry_multiply(pathdir, filename, i,j):
         pathdir_weights = "results/NN_trained_models/models/"
 
         # load the data
-        n_variables = np.loadtxt(pathdir+"/%s" %filename, dtype='str').shape[1]-1
-        variables = np.loadtxt(pathdir+"/%s" %filename, usecols=(0,))
+        n_variables = np.loadtxt(pathdir+filename, dtype='str').shape[1]-1
+        variables = np.loadtxt(pathdir+filename, usecols=(0,))
 
         for k in range(1,n_variables):
-            v = np.loadtxt(pathdir+"/%s" %filename, usecols=(k,))
+            v = np.loadtxt(pathdir+filename, usecols=(k,))
             variables = np.column_stack((variables,v))
         
-        f_dependent = np.loadtxt(pathdir+"/%s" %filename, usecols=(n_variables,))
+        f_dependent = np.loadtxt(pathdir+filename, usecols=(n_variables,))
         f_dependent = np.reshape(f_dependent,(len(f_dependent),1))
 
         factors = torch.from_numpy(variables) 
@@ -456,8 +456,8 @@ def check_translational_symmetry_plus(pathdir, filename):
         pathdir_weights = "results/NN_trained_models/models/"
 
         # load the data
-        n_variables = np.loadtxt(pathdir+"/%s" %filename, dtype='str').shape[1]-1
-        variables = np.loadtxt(pathdir+"/%s" %filename, usecols=(0,))
+        n_variables = np.loadtxt(pathdir+filename, dtype='str').shape[1]-1
+        variables = np.loadtxt(pathdir+filename, usecols=(0,))
 
         if n_variables==1:
             print(filename, "just one variable for ADD \n")
@@ -465,11 +465,11 @@ def check_translational_symmetry_plus(pathdir, filename):
             return (-1,-1,-1)
         else:
             for j in range(1,n_variables):
-                v = np.loadtxt(pathdir+"/%s" %filename, usecols=(j,))
+                v = np.loadtxt(pathdir+filename, usecols=(j,))
                 variables = np.column_stack((variables,v))
         
 
-        f_dependent = np.loadtxt(pathdir+"/%s" %filename, usecols=(n_variables,))
+        f_dependent = np.loadtxt(pathdir+filename, usecols=(n_variables,))
         f_dependent = np.reshape(f_dependent,(len(f_dependent),1))
 
         factors = torch.from_numpy(variables) 
@@ -531,14 +531,14 @@ def do_translational_symmetry_plus(pathdir, filename, i,j):
         pathdir_weights = "results/NN_trained_models/models/"
 
         # load the data
-        n_variables = np.loadtxt(pathdir+"/%s" %filename, dtype='str').shape[1]-1
-        variables = np.loadtxt(pathdir+"/%s" %filename, usecols=(0,))
+        n_variables = np.loadtxt(pathdir+filename, dtype='str').shape[1]-1
+        variables = np.loadtxt(pathdir+filename, usecols=(0,))
 
         for k in range(1,n_variables):
-            v = np.loadtxt(pathdir+"/%s" %filename, usecols=(k,))
+            v = np.loadtxt(pathdir+filename, usecols=(k,))
             variables = np.column_stack((variables,v))
         
-        f_dependent = np.loadtxt(pathdir+"/%s" %filename, usecols=(n_variables,))
+        f_dependent = np.loadtxt(pathdir+filename, usecols=(n_variables,))
         f_dependent = np.reshape(f_dependent,(len(f_dependent),1))
 
         factors = torch.from_numpy(variables) 
