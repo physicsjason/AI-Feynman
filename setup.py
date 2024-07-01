@@ -1,7 +1,7 @@
-# import setuptools
-# from numpy.distutils.core import Extension, setup
-from distutils.core import setup
-from distutils.extension import Extension
+import setuptools
+from numpy.distutils.core import Extension, setup
+# from distutils.core import setup
+# from distutils.extension import Extension
 
 sr1 = Extension(name='aifeynman._symbolic_regress1', sources=[
     'aifeynman/symbolic_regress1.f90'])
@@ -46,7 +46,7 @@ setup(
     install_requires=['matplotlib',
                       'numpy',
                       'seaborn',
-                      'sklearn',
+                      'scikit-learn',
                       'sortedcontainers',
                       'sympy >= 1.4',
                       'torch >= 1.4.0',
