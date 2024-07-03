@@ -6,21 +6,27 @@ It's strongly recommended to setup a fresh virtual environment by typing
     source feyn/bin/activate
     
 First install numpy with `pip install numpy`.
-The 'aifeynman' package is available on PyPI and can be installed with `pip install aifeynman`.
 
-Note that for now, AI Feynman is supported only for Linux and Mac environments.
+*This* 'aifeynman' package can be installed with `pip install git+https://github.com/physicsjason/AI-Feynman.git`.
+
+Note the original project (https://github.com/SJ001/AI-Feynman/) appears abbandoned, this project is an attempt at learning how create a python package and maybe at various stages of working. It is not supported and only expected to work on my computer, but will probably work in Linux and Mac environments.
+
+This project was started by following the instructions at https://github.com/SJ001/AI-Feynman/issues/85.
 
 ## First example
-Move into a clean directory and run the following Python commands:
+Download example_data from https://space.mit.edu/home/tegmark/aifeynman/ and place it in a clean directory.
+Also download https://space.mit.edu/home/tegmark/aifeynman/units.csv, convert it to an excel file (units.xlsx) and place it in the same directory.
+
+Move into that clean directory and run the following Python commands:
 
     import aifeynman
 
-    aifeynman.get_demos("example_data") # Download examples from server
+    #aifeynman.get_demos("example_data") # currently broken
     aifeynman.run_aifeynman("./example_data/", "example1.txt", 60, "14ops.txt", polyfit_deg=3, NN_epochs=500)
     
-This example will get solved in about 10-30 minutes depending on what computer you have and whether you have a GPU.
+This example will get solved in about 80 minutes depending on what computer you have and whether you have a GPU.
 
-Here ‘example.txt’ contains the data table to perform symbolic regression on, with columns separated by spaces, commas or tabs. The other parameters control the search: here the brute-force modules tries combinations of the 14 basic operations in ‘14ops.txt’ for up to 60 seconds, polynomial fits are tried up to degree 3, and the interpolating neural network is trained for up to 500 epochs.
+Here ‘example1.txt’ contains the data table to perform symbolic regression on, with columns separated by spaces, commas or tabs. The other parameters control the search: here the brute-force modules tries combinations of the 14 basic operations in ‘14ops.txt’ for up to 60 seconds, polynomial fits are tried up to degree 3, and the interpolating neural network is trained for up to 500 epochs.
 
 # AI-Feynman
 
