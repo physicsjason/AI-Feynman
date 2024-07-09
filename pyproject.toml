@@ -18,6 +18,5 @@ dependencies = ['numpy>=2,<3',
                 'torchvision']
 license = {file = 'LICENSE'}
 authors = [
-  {name = 'Jason Leonard', email = 'jason.leonard@gmail.com'},
   {name='Silviu-Marian Udrescu', email='sudrescu@mit.edu'}
 ]
