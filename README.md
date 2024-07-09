@@ -3,6 +3,7 @@
 It's strongly recommended to setup a fresh virtual environment.
 
 *This* 'aifeynman' package can be installed with
+    
     pip install git+https://github.com/physicsjason/AI-Feynman.git
 
 Note the original project (https://github.com/SJ001/AI-Feynman/) appears abandoned, this project is an attempt at learning how create a python package and may be at various stages of working. It is not supported and only expected to work on my computer, but will probably work in Linux and Mac environments.
