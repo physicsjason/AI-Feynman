@@ -8,11 +8,6 @@ py_mod = import('python')
 py = py_mod.find_installation(pure: false)
 py_dep = py.dependency()
 
-python = import('python').find_installation().full_path()
-#py_mod = import('python').find_installation('python3')
-
-# subdir('aifeynman')
-
 dest = 'aifeynman'
 
 python_sources = [
@@ -141,6 +136,3 @@ foreach script : scripts
    install_dir: get_option('bindir')
  )
 endforeach
-
-# Add the post-install script
-# meson.add_install_script('post_install.py')
