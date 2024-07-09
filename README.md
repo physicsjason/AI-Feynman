@@ -1,13 +1,9 @@
 # Quick Start
 ## Installation
-It's strongly recommended to setup a fresh virtual environment by typing
+It's strongly recommended to setup a fresh virtual environment.
 
-    virtualenv -p python3 feyn
-    source feyn/bin/activate
-    
-First install numpy with `pip install numpy`.
-
-*This* 'aifeynman' package can be installed with `pip install git+https://github.com/physicsjason/AI-Feynman.git`.
+*This* 'aifeynman' package can be installed with
+    pip install git+https://github.com/physicsjason/AI-Feynman.git
 
 Note the original project (https://github.com/SJ001/AI-Feynman/) appears abandoned, this project is an attempt at learning how create a python package and may be at various stages of working. It is not supported and only expected to work on my computer, but will probably work in Linux and Mac environments.
 
@@ -16,6 +12,7 @@ This project was started by following the instructions at https://github.com/SJ0
 ## First example
 Download example_data from https://space.mit.edu/home/tegmark/aifeynman/ and place it in a clean directory.
 Also download https://space.mit.edu/home/tegmark/aifeynman/units.csv, convert it to an excel file (units.xlsx) and place it in the same directory.
+These files are also availible at https://github.com/physicsjason/AI-Feynman.git along with a jupyter notebook example.ipynb that contains a version of the code below.
 
 Move into that clean directory and run the following Python commands:
 
@@ -33,8 +30,6 @@ Here ‘example1.txt’ contains the data table to perform symbolic regression o
 This code is an improved implementation of AI Feynman: a Physics-Inspired Method for Symbolic Regression, Silviu-Marian Udrescu and Max Tegmark (2019) [[Science Advances](https://advances.sciencemag.org/content/6/16/eaay2631/tab-pdf)] and AI Feynman 2.0: Pareto-optimal symbolic regression exploiting graph modularity, Udrescu S.M. et al. (2020) [[arXiv](https://arxiv.org/abs/2006.10782)].
 
 Please check [this Medium article](https://towardsdatascience.com/ai-feynman-2-0-learning-regression-equations-from-data-3232151bd929) for a more detailed eplanation of how to get the code running.
-
-In order to get started, run compile.sh to compile the fortran files used for the brute force code.
 
 ai_feynman_example.py contains an example of running the code on some examples (found in the example_data directory). The examples correspond to the equations I.8.14, I.10.7 and I.50.26 in Table 4 in the paper. More data files on which the code can be tested on can be found in the [Feynman Symbolic Regression Database](https://space.mit.edu/home/tegmark/aifeynman.html). 
 
