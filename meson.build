@@ -7,6 +7,7 @@ add_languages('fortran')
 py_mod = import('python')
 py = py_mod.find_installation(pure: false)
 py_dep = py.dependency()
+python = import('python').find_installation().full_path()
 
 dest = 'aifeynman'
 
