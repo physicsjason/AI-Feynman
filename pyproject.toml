@@ -1,6 +1,6 @@
 [build-system]
 build-backend = 'mesonpy'
-requires = ['meson-python', 'cython','numpy']
+requires = ['meson-python', 'cython','numpy','fortran']
 
 [project]
 name = 'aifeynman'
