@@ -1,0 +1,23 @@
+[build-system]
+build-backend = 'mesonpy'
+requires = ['meson-python', 'cython','numpy']
+
+[project]
+name = 'aifeynman'
+version = '1.0.0'
+description = 'TOML install for AIFeynman'
+readme = 'README.md'
+requires-python = '>=3.8'
+dependencies = ['numpy>=2,<3',
+                'matplotlib',
+                'seaborn',
+                'scikit-learn',
+                'sortedcontainers',
+                'sympy >= 1.4',
+                'torch >= 1.4.0',
+                'torchvision']
+license = {file = 'LICENSE'}
+authors = [
+  {name = 'Jason Leonard', email = 'jason.leonard@gmail.com'},
+  {name='Silviu-Marian Udrescu', email='sudrescu@mit.edu'}
+]
