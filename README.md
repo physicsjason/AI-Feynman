@@ -1,5 +1,9 @@
 # Quick Start
 ## Installation
+Make sure gfortran is installed. In ubuntu, this can be done with
+
+    sudo apt install gfortran
+
 It's strongly recommended to setup a fresh virtual environment.
 
 *This* 'aifeynman' package can be installed with
